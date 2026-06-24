@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class EvenOddSub {
 
     public static int countBalancedSubarrays(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
