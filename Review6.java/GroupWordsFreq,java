@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class GroupWordsFreq {
+
+    public static List<List<String>> groupWords(String[] words) {
+
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for (String word : words) {
+
+            HashMap<Character, Integer> freq = new HashMap<>();
+
+            for (char ch : word.toCharArray()) {
+                freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+            }
+
+            List<Integer> frequencies =
+                    new ArrayList<>(freq.values());
+
+            Collections.sort(frequencies);
+
+            String key = frequencies.toString();
+
+            map.putIfAbsent(key, new ArrayList<>());
+            map.get(key).add(word);
+        }
+
+        return new ArrayList<>(map.values());
+    }
+
+    public static void main(String[] args) {
+
+        String[] words =
+                {"abb", "xyy", "abc", "mno", "aab", "ccd"};
+
+        List<List<String>> result = groupWords(words);
+
+        System.out.println(result);
+    }
+}

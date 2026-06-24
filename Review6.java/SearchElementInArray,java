@@ -1,0 +1,16 @@
+import java.util.*;
+//previously did it with binary search, but it changes indexes of elements (after sorting), so I did it with linear search
+public class SearchElementInArray
+{
+	public static void main(String[] args) {
+		int arr1[] = {10,3,40,20,50,80,70};
+		int target = 40;
+		for(int i=0;i<arr1.length;i++)
+		{
+		    if(arr1[i]==target)
+		    {
+		        System.out.print(i);
+		    }
+		}
+	}
+}
