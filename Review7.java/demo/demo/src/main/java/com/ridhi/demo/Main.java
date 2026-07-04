@@ -1,0 +1,21 @@
+package com.ridhi.demo;
+import java.sql.Connection;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Connection con = DBConnection.getConnection();
+        if (con != null) {
+            System.out.println("Connection Successful!");
+        } else {
+            System.out.println("Connection Failed!");
+        }
+        SupplierOperations supplier = new SupplierOperations();
+
+        supplier.addSupplier();
+
+        SalesOperations sales = new SalesOperations();
+        sales.sellProduct();
+    }
+}
