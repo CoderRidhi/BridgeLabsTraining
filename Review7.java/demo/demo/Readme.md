@@ -29,7 +29,7 @@ The project manages suppliers, products, and sales records while following a mod
 ---
 # Project Workflow
 
-![Project Workflow](workflow.png)
+![Project Workflow](workflow.jpeg)
 ## Project Structure
 
 ```
